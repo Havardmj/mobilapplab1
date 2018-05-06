@@ -24,7 +24,7 @@ public class A3 extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //changeView(t4);
+                changeView(t4);
             }
         });
     }

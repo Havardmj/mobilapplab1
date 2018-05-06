@@ -54,11 +54,13 @@ public class A1 extends AppCompatActivity implements AdapterView.OnItemSelectedL
     * * function set up the Spinner content and arange it to the spinner.
     * */
     private void setSpinnerContent() {
+
         ArrayList<String> content = new ArrayList<String>();    //define anew arrayList
-        //insert content to list:
-        content.add("test-one");
-        content.add("test-two");
-        content.add("test-three");
+
+        //fill spinner with strings:
+        content.add("Android-programming is fun");
+        content.add("Better than IOS (I think ? )");
+        content.add("Haven't really tried, so can't say for sure ;)");
 
         //define a arrayAdapter, that uses the content above.
         ArrayAdapter<String> adapt = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, content);
@@ -81,8 +83,10 @@ public class A1 extends AppCompatActivity implements AdapterView.OnItemSelectedL
 
     @Override
     public void onBackPressed() {
-        int pid = android.os.Process.myPid();
-        android.os.Process.killProcess(pid);
+
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
     }
 
     private int loadSelection() {

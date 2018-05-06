@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/t4"
-         android:layout_width="wrap_content"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="34dp"
         android:layout_marginTop="32dp"
@@ -16,17 +16,23 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/b3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
+
 
     <Button
         android:id="@+id/b3"
-        android:layout_width="211dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="355dp"
-        android:text="B3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:drawableRight="@drawable/ic_keyboard"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/t4" />
+        />
+
 </android.support.constraint.ConstraintLayout>

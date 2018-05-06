@@ -8,10 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class A2 extends AppCompatActivity {
+
     public static final int SET_CONTACT_REQUEST = 1;  // The request code
+
     private Button b2;
     private EditText t2;
-    private EditText t3;
 
 
     @Override
@@ -22,24 +23,25 @@ public class A2 extends AppCompatActivity {
         //map variables to GUI elements
         b2 = findViewById(R.id.b2);
         t2 = findViewById(R.id.t2);
-        t3 = findViewById(R.id.t3);
 
+
+        String  defaultFraze = "Hello ";
+        String userInput = getIntent().getStringExtra("input");
 
         t2.setKeyListener(null);
         t2.setOnClickListener(null);
-        t3.setKeyListener(null);
-        t3.setOnClickListener(null);
 
-        String s = getIntent().getStringExtra("input");
-        t2.setText("Goodday: " + s);
+
+        t2.setText(defaultFraze + userInput);
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                changeView();
             }
         });
     }
+
     @Override
     public void onBackPressed() {
         Intent i = new Intent(this, A1.class);
@@ -51,7 +53,7 @@ public class A2 extends AppCompatActivity {
         if (requestCode == SET_CONTACT_REQUEST) {
             if(resultCode == RESULT_OK) {
                 String res = data.getStringExtra("t4_value");
-                t3.setText(("Feedback: " + res));
+                t2.setText(("Feedback: " + res));
             }
         }
     }
