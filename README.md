@@ -21,7 +21,7 @@ between different runs of the application, such that, when the user changes the 
 upon the consecutive execution of the app, the selection is as the user picked it, not as the app had it initially
 as default when the app was executed for the first time.
 
-Checklist
+Checklist:
 
 The git repository URL is correctly provided, such that command works: git clone <url>
  
